@@ -653,7 +653,7 @@ function MapView({ fromCoord, toCoord }) {
         const response = await axios.get('http://localhost:5000/api/alerts')
         setAlerts(response.data)
       } catch (err) {
-        setError('Failed to fetch alerts')
+        setError('API requests exceeded. Please try again later')
         console.error('Error fetching alerts:', err)
       }
     }
