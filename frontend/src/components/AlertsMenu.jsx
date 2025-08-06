@@ -15,7 +15,7 @@ function AlertsMenu({ isOpen, onClose }) {
         setAlerts(response.data)
         setLoading(false)
       } catch (err) {
-        setError('Failed to fetch alerts')
+        setError('API requests exceeded. Try again later')
         setLoading(false)
         console.error('Error fetching alerts:', err)
       }
